@@ -32,16 +32,16 @@ const Root = () => (
   </Query>
   )
 
-const GET_TRACKS_QUERY = gql`
-  {
-    tracks{
-      id
-      title
-      description
-      url
-    }
-  }
-`
+// const GET_TRACKS_QUERY = gql`
+//   {
+//     tracks{
+//       id
+//       title
+//       description
+//       url
+//     }
+//   }
+// `
 export const ME_QUERY = gql`
   {
     me{

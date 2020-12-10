@@ -20,7 +20,6 @@ const LikeTrack = ({ classes, trackId, likeCount }) => {
       mutation = {CREATE_LIKE_MUTATION}
       variables = {{ trackId }}
       onCompleted = {data => {
-        {/*console.log(data)*/}
       }}
       refetchQueries = {() => [{query: ME_QUERY }]}
     >
