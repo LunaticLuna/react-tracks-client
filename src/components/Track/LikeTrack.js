@@ -32,7 +32,7 @@ const LikeTrack = ({ classes, trackId, likeCount }) => {
             createLike()
           }}
         >
-          {likeCount}
+          {/*likeCount*/}
           <ThumbUpIcon className = {classes.icon} />
         </IconButton>
         )}

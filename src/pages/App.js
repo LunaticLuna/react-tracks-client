@@ -22,8 +22,8 @@ const App = ({ classes }) => {
           if (error) return <Error error = {error} />
           const tracks = searchResults.length > 0 
                           ? searchResults : data.tracks
-          console.log(tracks)
-          return <TrackList tracks = { tracks } />
+          console.log([...tracks,...defaultData])
+          return <TrackList tracks = { [...tracks,...defaultData]} />
 
         }}
       </Query>
@@ -55,5 +55,33 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2
   }
 });
+const defaultData = [
+  {
+    description: "Track Description↵Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    id: "2",
+    likes: [],
+    postedBy: {id: "3", username: "Sophia", __typename: "UserType"},
+    title: "June - Bobby Richards",
+    url: "http://res.cloudinary.com/jieli/raw/upload/v1607598592/hk7jjgmm7k0yqjrwbfrq.mp3",
+  },
+  {
+    description: "Track Description↵Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    id: "1",
+    likes: [],
+    postedBy: {id: "3", username: "Sophia", __typename: "UserType"},
+    title: "June - Bobby Richards",
+    url: "http://res.cloudinary.com/jieli/raw/upload/v1607598592/hk7jjgmm7k0yqjrwbfrq.mp3",
+  },
+
+{
+    description: "Track Description↵Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    id: "3",
+    likes: [],
+    postedBy: {id: "3", username: "Sophia", __typename: "UserType"},
+    title: "June - Bobby Richards",
+    url: "http://res.cloudinary.com/jieli/raw/upload/v1607598592/hk7jjgmm7k0yqjrwbfrq.mp3",
+  }
+
+]
 
 export default withStyles(styles)(App);
