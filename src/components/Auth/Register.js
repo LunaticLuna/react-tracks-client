@@ -41,6 +41,10 @@ const Register = ({ classes, setNewUser }) => {
         <Typography variant = "headline">
           Register
         </Typography>
+        <Typography variant="caption">
+          *You can Register with any e-mail. I won't verify you
+        </Typography>
+        
         <Mutation 
           mutation = {REGISTER_MUTATION}
           variables = {{username, email, password}}
